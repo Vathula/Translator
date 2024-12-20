@@ -1,0 +1,118 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.ticket-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ticket-card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: calc(35% - 20px);
+    border-radius: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.ticket-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: #fff;
+    /* Inner curve color */
+    border-top-left-radius: 100px;
+    /* Creates the curve */
+    border-bottom-left-radius: 100px;
+    /* Creates the curve */
+    z-index: 0;
+    /* Places it behind the content */
+}
+
+.ticket-card .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    /* Ensures content stays above the pseudo-element */
+    z-index: 1;
+}
+
+.zoo {
+    background: linear-gradient(135deg, #ff7a7a, #ff6f61);
+}
+
+.butterfly {
+    background: linear-gradient(135deg, #ff6fcf, #ff66a1);
+}
+
+.bus-safari {
+    background: linear-gradient(135deg, #ff9b61, #ff7347);
+}
+
+.jeep-safari {
+    background: linear-gradient(135deg, #8f8fff, #6f6fff);
+}
+
+.ticket-card:hover {
+    transform: scale(1.05);
+}
+
+.ticket-card .content h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+
+.ticket-card .content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 150px;
+    flex-shrink: 0;
+}
+.app-speech-input {
+    position: fixed; /* Sticks the mic in a fixed position relative to the viewport */
+    top: 10px; /* Adjust the distance from the top */
+    right: 10px; /* Adjust the distance from the right */
+    z-index: 1000; /* Ensures it stays above other elements */
+    text-align: center; /* Centers the button content */
+}
+
+.app-speech-input-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.app-speech-input-btn img {
+    width: 45px; /* Keeps the image size consistent */
+    height: auto;
+}

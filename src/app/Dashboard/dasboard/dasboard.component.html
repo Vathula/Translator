@@ -1,0 +1,49 @@
+<div style="text-align:center">
+  <div class="app-speech-input" [class.app-speech-input-listening]="listening">
+    <button *ngIf="!listening" style="border: 0px;background: transparent;" class="app-speech-input-btn"
+      (click)="startRecognition()">
+      <img style="width: 45px;" src="../assets/image/microphone.png" alt="">
+    </button>
+    <button *ngIf="listening" class="app-speech-input-btn" style="border: 0px;background: transparent;"
+      (click)="stopRecognition()">
+      <img style="width: 45px;" src="../assets/image/mute.png" alt=""></button>
+
+  </div>
+  <h3>Recognized Text:</h3>
+  <p>{{ recognizedText }}</p>
+</div>
+<div class="container">
+  <!-- <h1>My Web Page</h1>
+
+  <p>Hello everybody!</p>
+
+  <p>Translate this page:</p> -->
+
+  <div id="google_translate_element"></div>
+
+  <!-- <p>You can translate the content of this page by selecting a language in the select box.</p> -->
+</div>
+<div class="container">
+  <div class="logo">
+    <img src="../../assets/image/logo.jpeg" alt="Bannerghatta Biological Park Logo">
+  </div>
+
+  <div class="ticket-options">
+    <div class="row">
+      <div class="ticket-card" *ngFor="let option of ticketOptions | slice: 0:2"[ngClass]="option.class">
+        <div class="content">
+          <h3>{{ option.name }}</h3>
+          <img [src]="option.icon" [alt]="option.name + ' Icon'" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ticket-card" *ngFor="let option of ticketOptions | slice: 2:4" [ngClass]="option.class">
+        <div class="content">
+          <h3>{{ option.name }}</h3>
+          <img [src]="option.icon" [alt]="option.name + ' Icon'" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

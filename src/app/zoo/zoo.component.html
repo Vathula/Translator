@@ -1,0 +1,78 @@
+<p>zoo works!</p>
+<div class="booking-page">
+    <div class="header">
+        <button class="back-button"></button>
+        <h1>Zoo</h1>
+    </div>
+
+    <div class="date-picker">
+        <button>&lt;</button>
+        <div *ngFor="let date of weekDates" [class.active]="activeDate === date" class="date" [innerHTML]="date"
+            (click)="selectDate(date)">
+        </div>
+        <button>&gt;</button>
+    </div>
+
+    <div class="ac-toggle">
+        <button class="active">AC</button>
+        <button>Non AC</button>
+    </div>
+
+    <div class="info">
+        School group tickets have to be booked at the Ticket counter, on the day of the visit.
+    </div>
+
+    <div class="ticket-list">
+        <div class="ticket">
+            <div class="details">
+                <h3>Adult (12 - 59 years)</h3>
+                <p>₹670/ Person</p>
+            </div>
+            <button class="add-button">Add</button>
+        </div>
+        <div class="ticket">
+            <div class="details">
+                <h3>Child (5 - 11 years)</h3>
+                <p>₹470/ Person</p>
+            </div>
+            <button class="add-button">Add</button>
+        </div>
+        <div class="ticket">
+            <div class="details">
+                <h3>Senior Citizen (60 years and above)</h3>
+                <p>₹670/ Person</p>
+            </div>
+            <button class="add-button">Add</button>
+        </div>
+        <div class="ticket">
+            <div class="details">
+                <h3>Infant (0 - 4 years)</h3>
+                <p>₹0/ Person</p>
+            </div>
+            <button class="add-button">Add</button>
+        </div>
+        <div class="ticket">
+            <div class="details">
+                <h3>Specially Abled</h3>
+                <p>₹670/ Person</p>
+            </div>
+            <button class="add-button">Add</button>
+        </div>
+    </div>
+
+    <div class="add-ons">
+        <h3>Add On</h3>
+        <label>
+            <input type="checkbox" />
+            Video Camera
+        </label>
+        <label>
+            <input type="checkbox" />
+            Butterfly Park
+        </label>
+        <label>
+            <input type="checkbox" />
+            Still Camera
+        </label>
+    </div>
+</div>
